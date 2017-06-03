@@ -12,3 +12,4 @@ debug
 GeneratedFiles
 Release
 Debug
+*.opensdf
