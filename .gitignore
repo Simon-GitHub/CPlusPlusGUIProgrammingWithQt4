@@ -2,3 +2,13 @@ ipch
 *.sln
 *.suo
 *.sdf
+release
+Win32
+debug
+*.user
+*.vcxproj
+*.filters
+*.vcproj
+GeneratedFiles
+Release
+Debug
