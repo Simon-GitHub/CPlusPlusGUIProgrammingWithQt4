@@ -64,6 +64,6 @@ int main(int argc, char *argv[])
     settings.maxY = 100.0;
     plotter.setPlotSettings(settings);
 #endif
-    plotter.show();
-    return app.exec();
+	plotter.show();
+	return app.exec();
 }
