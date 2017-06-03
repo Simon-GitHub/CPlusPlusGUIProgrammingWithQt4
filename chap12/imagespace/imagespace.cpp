@@ -1,5 +1,6 @@
 #include <QtGui>
 #include <iostream>
+#include <QDebug>
 
 qlonglong imageSpace(const QString &path)
 {
@@ -25,13 +26,17 @@ int main(int argc, char *argv[])
     QCoreApplication app(argc, argv);
     QStringList args = QCoreApplication::arguments();
 
-    QString path = QDir::currentPath();
+    //QString path = QDir::currentPath();
+	QString path = QDir::homePath();
     if (args.count() > 1)
         path = args[1];
 
     std::cout << "Space used by images in " << qPrintable(path)
               << " and its subdirectories is "
               << (imageSpace(path) / 1024) << " KB" << std::endl;
+	qDebug() << "Space used by images in " << qPrintable(path)
+		<< " and its subdirectories is "
+		<< (imageSpace(path) / 1024) << " KB";
 
-    return 0;
+    return app.exec();
 }
